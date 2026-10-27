@@ -5,6 +5,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "reelcounter_preferences")
@@ -76,10 +77,7 @@ class UserPreferencesManager(private val context: Context) {
     }
 
     suspend fun isLimitNotifiedToday(todayDate: String): Boolean {
-        var notified = false
-        context.dataStore.data.collect {
-            notified = it[KEY_LAST_NOTIFIED_DATE] == todayDate
-        }
-        return notified
+        val prefs = context.dataStore.data.first()
+        return prefs[KEY_LAST_NOTIFIED_DATE] == todayDate
     }
 }

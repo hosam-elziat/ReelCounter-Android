@@ -24,6 +24,7 @@ import com.reelcounter.app.service.FloatingVRGogglesService
 import com.reelcounter.app.ui.screens.*
 import com.reelcounter.app.ui.theme.*
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
