@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReelCounter</string>
+    <string name="app_tagline">Short-form video daily awareness &amp; wellbeing counter</string>
+    
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_label">ReelCounter Video Detection Engine</string>
+    <string name="accessibility_service_description">Detects short-form video transitions in TikTok, Instagram Reels, YouTube Shorts, Facebook Reels, and Snapchat Spotlight to calculate daily usage and assist digital wellbeing. Processed 100% locally on device.</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_statistics">Statistics</string>
+    <string name="nav_applications">Apps</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_today">Today</string>
+    <string name="dashboard_total_videos">Videos Watched Today</string>
+    <string name="dashboard_estimated_time">Estimated Viewing Time</string>
+    <string name="dashboard_avg_duration">Avg. Time / Video</string>
+    <string name="dashboard_sessions">Active Sessions</string>
+    <string name="dashboard_vs_yesterday">vs. Yesterday</string>
+    <string name="dashboard_daily_goal">Daily Goal</string>
+    <string name="dashboard_goal_progress">%1$d of %2$d videos</string>
+    <string name="dashboard_goal_reached">Daily video threshold reached!</string>
+    <string name="dashboard_hourly_chart">Hourly Distribution</string>
+    <string name="dashboard_active_hours">Peak Consumption Times</string>
+    <string name="dashboard_empty_title">No Videos Detected Today</string>
+    <string name="dashboard_empty_desc">Start scrolling through supported apps or test the detector to see live stats.</string>
+
+    <!-- Apps -->
+    <string name="app_tiktok">TikTok</string>
+    <string name="app_instagram_reels">Instagram Reels</string>
+    <string name="app_facebook_reels">Facebook Reels</string>
+    <string name="app_youtube_shorts">YouTube Shorts</string>
+    <string name="app_snapchat_spotlight">Snapchat Spotlight</string>
+    <string name="app_status_monitored">Monitored</string>
+    <string name="app_status_paused">Paused</string>
+    <string name="app_status_disabled">Disabled</string>
+    <string name="app_accuracy_high">High Accuracy (Exact Node)</string>
+    <string name="app_accuracy_heuristic">Heuristic Estimate</string>
+    <string name="app_accuracy_uncertain">Uncertain / Recalibrating</string>
+
+    <!-- Floating VR Goggles -->
+    <string name="floating_icon_title">Floating VR Goggles Counter</string>
+    <string name="floating_icon_desc">Interactive floating HUD showing live count over apps</string>
+    <string name="floating_badge_label">Live Badge</string>
+    <string name="floating_action_pause">Pause Counting</string>
+    <string name="floating_action_resume">Resume Counting</string>
+    <string name="floating_action_open">Open ReelCounter</string>
+    <string name="floating_icon_size">Icon Size</string>
+    <string name="floating_icon_opacity">Icon Opacity</string>
+
+    <!-- Statistics -->
+    <string name="stats_timeframe_today">Today</string>
+    <string name="stats_timeframe_yesterday">Yesterday</string>
+    <string name="stats_timeframe_7days">Last 7 Days</string>
+    <string name="stats_timeframe_30days">Last 30 Days</string>
+    <string name="stats_timeframe_custom">Custom Range</string>
+    <string name="stats_daily_average">Daily Average</string>
+    <string name="stats_highest_day">Highest Day</string>
+    <string name="stats_export_csv">Export CSV History</string>
+    <string name="stats_export_success">CSV successfully generated</string>
+
+    <!-- Permissions and Onboarding -->
+    <string name="onboarding_title">Setup ReelCounter</string>
+    <string name="onboarding_subtitle">5 transparent steps to local, privacy-first video counting</string>
+    <string name="wizard_start_auto">Start Automatic Step-by-Step Setup</string>
+    <string name="wizard_step_label">Step %1$d of %2$d</string>
+    <string name="wizard_auto_advancing">Permission granted! Auto-advancing to next step...</string>
+    <string name="wizard_all_done">All permissions granted! ReelCounter is ready.</string>
+    <string name="perm_usage_access_title">1. Usage Access</string>
+    <string name="perm_usage_access_desc">Identifies when a supported social media app enters the foreground. Required for session timing.</string>
+    <string name="perm_accessibility_title">2. Accessibility Service</string>
+    <string name="perm_accessibility_desc">Opt-in detection of video feed scroll transitions without recording content, keystrokes, or media.</string>
+    <string name="perm_overlay_title">3. Display Over Other Apps</string>
+    <string name="perm_overlay_desc">Allows the floating VR goggles icon and live video count badge to appear over other apps.</string>
+    <string name="perm_notifications_title">4. Notifications</string>
+    <string name="perm_notifications_desc">Displays persistent background monitoring status and alerts when you cross your daily goal.</string>
+    <string name="perm_battery_title">5. Unrestricted Background Operation</string>
+    <string name="perm_battery_desc">Exempts ReelCounter from aggressive battery task-killing to maintain uninterrupted counting.</string>
+    <string name="perm_start_title">Ready to Monitor</string>
+    <string name="perm_start_desc">All necessary permissions configured. You are in complete control.</string>
+    <string name="perm_grant_button">Grant Permission</string>
+    <string name="perm_granted">Granted</string>
+    <string name="perm_not_granted">Requires Attention</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Language</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_ar">العربية (Arabic)</string>
+    <string name="settings_threshold_title">Minimum Viewing Threshold</string>
+    <string name="settings_threshold_desc">Ignore rapid scrolls faster than this duration (filters false positives)</string>
+    <string name="settings_daily_limit">Daily Video Limit Alert</string>
+    <string name="settings_clear_data">Clear Local History</string>
+    <string name="settings_clear_confirm">Delete all locally stored video records and historical statistics? This cannot be undone.</string>
+    <string name="settings_privacy_policy">Privacy &amp; Local Processing</string>
+    <string name="settings_about">About ReelCounter</string>
+
+    <!-- Privacy Manifesto -->
+    <string name="privacy_title">100% On-Device Privacy</string>
+    <string name="privacy_content">ReelCounter operates strictly on your device. We never capture screen contents, text, passwords, or personal feeds. No accounts, no analytics servers, and no telemetry.</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">ReelCounter Background Monitoring</string>
+    <string name="notification_title_running">ReelCounter Active</string>
+    <string name="notification_text_running">Live video counter: %1$d videos watched today.</string>
+    <string name="notification_title_limit">Daily Limit Reached!</string>
+    <string name="notification_text_limit">You have watched %1$d short-form videos today. Take a mindful break!</string>
+</resources>

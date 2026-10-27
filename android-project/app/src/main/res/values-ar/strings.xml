@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReelCounter</string>
+    <string name="app_tagline">عدّاد يومي لمقاطع الفيديو القصيرة والوعي الرقمي</string>
+    
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_label">محرك رصد الفيديو ReelCounter</string>
+    <string name="accessibility_service_description">يرصد الانتقالات بين مقاطع الفيديو القصيرة في تيك توك، ريلز إنستغرام، يوتيوب شورتس، فيسبوك ريلز، وأضواء سناب شات لحساب الاستهلاك اليومي. المعالجة محلية بالكامل على جهازك.</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">الرئيسية</string>
+    <string name="nav_statistics">الإحصائيات</string>
+    <string name="nav_applications">التطبيقات</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_today">اليوم</string>
+    <string name="dashboard_total_videos">مقاطع الفيديو اليوم</string>
+    <string name="dashboard_estimated_time">الوقت التقديري للمشاهدة</string>
+    <string name="dashboard_avg_duration">متوسط مدة المقطع</string>
+    <string name="dashboard_sessions">جلسات المشاهدة</string>
+    <string name="dashboard_vs_yesterday">مقارنة بالأمس</string>
+    <string name="dashboard_daily_goal">الهدف اليومي</string>
+    <string name="dashboard_goal_progress">%1$d من %2$d مقطع</string>
+    <string name="dashboard_goal_reached">تم الوصول للحد الأقصى اليومي المخصص!</string>
+    <string name="dashboard_hourly_chart">التوزيع على مدار اليوم</string>
+    <string name="dashboard_active_hours">أوقات الذروة</string>
+    <string name="dashboard_empty_title">لا توجد مقاطع مرصودة اليوم</string>
+    <string name="dashboard_empty_desc">ابدأ بتصفح أحد التطبيقات المدعومة أو اختبر المحاكي لبدء العد المباشر.</string>
+
+    <!-- Apps -->
+    <string name="app_tiktok">تيك توك (TikTok)</string>
+    <string name="app_instagram_reels">ريلز إنستغرام (Instagram Reels)</string>
+    <string name="app_facebook_reels">ريلز فيسبوك (Facebook Reels)</string>
+    <string name="app_youtube_shorts">يوتيوب شورتس (YouTube Shorts)</string>
+    <string name="app_snapchat_spotlight">أضواء سناب شات (Snapchat Spotlight)</string>
+    <string name="app_status_monitored">مفعل وقيد المراقبة</string>
+    <string name="app_status_paused">متوقف مؤقتاً</string>
+    <string name="app_status_disabled">معطّل</string>
+    <string name="app_accuracy_high">دقة عالية (عقدة مطابقة)</string>
+    <string name="app_accuracy_heuristic">تقدير تقريبي</string>
+    <string name="app_accuracy_uncertain">غير مؤكد / بحاجة لمزامنة</string>
+
+    <!-- Floating VR Goggles -->
+    <string name="floating_icon_title">أيقونة نظارات الواقع الافتراضي العائمة</string>
+    <string name="floating_icon_desc">أيقونة عائمة تفاعلية تعرض العدّاد المباشر فوق الشاشة</string>
+    <string name="floating_badge_label">العدّاد المباشر</string>
+    <string name="floating_action_pause">إيقاف مؤقت للعد</string>
+    <string name="floating_action_resume">استئناف العد</string>
+    <string name="floating_action_open">فتح التطبيق الكامل</string>
+    <string name="floating_icon_size">حجم الأيقونة</string>
+    <string name="floating_icon_opacity">شفافية الأيقونة</string>
+
+    <!-- Statistics -->
+    <string name="stats_timeframe_today">اليوم</string>
+    <string name="stats_timeframe_yesterday">الأمس</string>
+    <string name="stats_timeframe_7days">آخر 7 أيام</string>
+    <string name="stats_timeframe_30days">آخر 30 يوماً</string>
+    <string name="stats_timeframe_custom">فترة مخصصة</string>
+    <string name="stats_daily_average">المعدل اليومي</string>
+    <string name="stats_highest_day">أعلى يوم استهلاكاً</string>
+    <string name="stats_export_csv">تصدير السجل كملف CSV</string>
+    <string name="stats_export_success">تم تصدير ملف CSV بنجاح</string>
+
+    <!-- Permissions and Onboarding -->
+    <string name="onboarding_title">تهيئة تطبيق ReelCounter</string>
+    <string name="onboarding_subtitle">5 خطوات سهلة لإعداد الصلاحيات محلياً مع احترام تام للخصوصية</string>
+    <string name="wizard_start_auto">بدء الإعداد التلقائي خطوة بخطوة</string>
+    <string name="wizard_step_label">الخطوة %1$d من %2$d</string>
+    <string name="wizard_auto_advancing">تم تفعيل الصلاحية بنجاح! الانتقال للخطوة التالية تلقائياً...</string>
+    <string name="wizard_all_done">تم تفعيل كافة الصلاحيات بنجاح! التطبيق جاهز للعمل.</string>
+    <string name="perm_usage_access_title">1. إمكانية الوصول إلى بيانات الاستخدام</string>
+    <string name="perm_usage_access_desc">للتعرف على التطبيق النشط في الواجهة وحساب وقت الجلسة الفعلي بدقة.</string>
+    <string name="perm_accessibility_title">2. خدمة إمكانية الوصول (Accessibility)</string>
+    <string name="perm_accessibility_desc">رصد حركة التمرير بين مقاطع الفيديو دون قراءة النصوص أو كلمات المرور أو التقاط الشاشة.</string>
+    <string name="perm_overlay_title">3. الظهور فوق التطبيقات الأخرى</string>
+    <string name="perm_overlay_desc">لعرض أيقونة نظارات الواقع الافتراضي العائمة مع عدّاد المقاطع المباشر.</string>
+    <string name="perm_notifications_title">4. الإشعارات</string>
+    <string name="perm_notifications_desc">لعرض حالة الرصد في الخلفية وتنبيهك عند تجاوز الحد الأقصى للمقاطع يومياً.</string>
+    <string name="perm_battery_title">5. استثناء توفير البطارية في الخلفية</string>
+    <string name="perm_battery_desc">يمنع نظام أندرويد من إيقاف الخدمة قسراً لضمان عمل العدّاد العائم دون انقطاع.</string>
+    <string name="perm_start_title">جاهز لبدء المراقبة</string>
+    <string name="perm_start_desc">تم تفعيل الصلاحيات المطلوبة. لديك التحكم الكامل في أي وقت.</string>
+    <string name="perm_grant_button">منح الصلاحية</string>
+    <string name="perm_granted">ممنوحة ومفعلة</string>
+    <string name="perm_not_granted">بحاجة للتفعيل</string>
+
+    <!-- Settings -->
+    <string name="settings_language">اللغة</string>
+    <string name="settings_language_en">English (الإنجليزية)</string>
+    <string name="settings_language_ar">العربية (Arabic)</string>
+    <string name="settings_threshold_title">الحد الأدنى لزمن المشاهدة</string>
+    <string name="settings_threshold_desc">تجاهل التمرير السريع الذي يقل عن هذه المدة لتفادي الاحتساب الخاطئ</string>
+    <string name="settings_daily_limit">تنبيه الحد اليومي للمقاطع</string>
+    <string name="settings_clear_data">مسح السجل المحلي</string>
+    <string name="settings_clear_confirm">هل أنت متأكد من حذف كافة البيانات والإحصائيات المحفوظة محلياً؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="settings_privacy_policy">سياسة الخصوصية والمعالجة المحلية</string>
+    <string name="settings_about">حول ReelCounter</string>
+
+    <!-- Privacy Manifesto -->
+    <string name="privacy_title">خصوصية كاملة 100% على الجهاز</string>
+    <string name="privacy_content">يعمل ReelCounter بالكامل على جهازك محلياً. لا نقوم بتسجيل الشاشة، ولا جمع كلمات المرور أو النصوص الخاصة، ولا نرفع أي بيانات إلى خوادم خارجية.</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">المراقبة في خلفية ReelCounter</string>
+    <string name="notification_title_running">ReelCounter نشط</string>
+    <string name="notification_text_running">العدّاد المباشر: تم احتساب %1$d مقطع فيديو اليوم.</string>
+    <string name="notification_title_limit">وصلت إلى الحد اليومي المحدد!</string>
+    <string name="notification_text_limit">لقد شاهدت %1$d مقطع فيديو قصير اليوم. خذ استراحة واعية!</string>
+</resources>

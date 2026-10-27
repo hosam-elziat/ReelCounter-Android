@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Compact Expandable Dashboard Panel -->
+    <LinearLayout
+        android:id="@+id/panel_quick_dashboard"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="52dp"
+        android:background="#E60F172A"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="#38BDF8"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_hud_pause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#3338BDF8"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/floating_action_pause"
+            android:textColor="#F8FAFC"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/btn_hud_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#4D8B5CF6"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/floating_action_open"
+            android:textColor="#F8FAFC"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Floating VR Goggles Icon & Badge -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <!-- VR Goggles Icon -->
+        <ImageView
+            android:id="@+id/img_vr_goggles"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_vr_icon_circle"
+            android:contentDescription="@string/floating_icon_title"
+            android:padding="10dp"
+            android:src="@drawable/ic_vr_goggles" />
+
+        <!-- Live Badge -->
+        <TextView
+            android:id="@+id/tv_video_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="-4dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/bg_counter_badge"
+            android:minWidth="22dp"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,6 @@
+{
+  "name": "ReelCounter - Short-Form Video Daily Counter",
+  "description": "Native Android app and interactive harness for tracking TikTok, Reels, Shorts, and Spotlight video views with floating VR goggles overlay, accessibility detectors, and Arabic/English support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
