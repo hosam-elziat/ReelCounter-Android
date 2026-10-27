@@ -3,6 +3,8 @@ name: Build ReelCounter APK
 on:
   push:
     branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
@@ -22,45 +24,71 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: 'gradle'
 
-      - name: Grant Execute Permission to Gradle Wrapper
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.7'
+
+      - name: Accept Android SDK Licenses
         run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses 2>/dev/null || true
+
+      - name: Prepare Gradle Wrapper and Build APK
+        run: |
+          # 1. Determine whether the Android project is at root or in android-project/
+          if [ -f "android-project/settings.gradle.kts" ]; then
+            echo "==> Building inside android-project/ subdirectory"
+            cd android-project
+          elif [ -f "settings.gradle.kts" ]; then
+            echo "==> Building in root directory"
+          else
+            echo "Error: No settings.gradle.kts found in repository!"
+            exit 1
+          fi
+
+          # 2. Ensure gradlew is executable
           if [ -f "./gradlew" ]; then
             chmod +x ./gradlew
           fi
-          if [ -f "./android-project/gradlew" ]; then
-            chmod +x ./android-project/gradlew
+
+          # 3. Ensure gradle-wrapper.jar is present and non-empty (regenerate with installed Gradle if missing)
+          if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ] || [ ! -s "gradle/wrapper/gradle-wrapper.jar" ]; then
+            echo "Wrapper JAR missing; generating via gradle wrapper..."
+            gradle wrapper --gradle-version 8.7
+            chmod +x ./gradlew
           fi
 
-      - name: Build Debug APK with Gradle
-        run: |
-          if [ -f "./gradlew" ]; then
-            ./gradlew assembleDebug --stacktrace
-          elif [ -f "./android-project/gradlew" ]; then
-            cd android-project && ./gradlew assembleDebug --stacktrace
-          fi
+          # 4. Compile the debug APK
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
-      - name: Locate and Rename APK
+      - name: Collect Output APK
         run: |
           mkdir -p build-output
-          find . -name "*.apk" -type f -exec cp {} build-output/ReelCounter-debug.apk \;
-          ls -la build-output/
+          # Find generated APK anywhere in the tree and copy it to build-output/
+          FOUND_APK=$(find . -name "*debug.apk" -o -name "*.apk" | grep -v "build-output" | head -n 1)
+          if [ -z "$FOUND_APK" ] || [ ! -f "$FOUND_APK" ]; then
+            echo "Error: No APK file generated during build!"
+            exit 1
+          fi
+          echo "Found compiled APK: $FOUND_APK"
+          cp "$FOUND_APK" build-output/ReelCounter-debug.apk
+          ls -lh build-output/ReelCounter-debug.apk
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ReelCounter-APK
+          name: ReelCounter-debug-apk
           path: build-output/ReelCounter-debug.apk
           retention-days: 30
 
       - name: Create GitHub Release with APK
         uses: softprops/action-gh-release@v2
-        if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/')
+        continue-on-error: true
         with:
           files: build-output/ReelCounter-debug.apk
           name: "ReelCounter Native Android App v1.0.0"
-          tag_name: "v1.0.0-${{ github.run_number }}"
+          tag_name: "v1.0.0-build-${{ github.run_number }}"
           body: |
             ## 📱 ReelCounter APK Download
             
